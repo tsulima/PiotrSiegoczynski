@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <nav>
+            <ul>
+                <li>Strona główna</li>
+                <li>O mnie</li>
+                <li>Osiągnięcia</li>
+                <li>Galeria</li>
+                <li>Media</li>
+            </ul>
+        </nav>
+        <div id="header" style="height: 650px; width: 100%; padding-top: 65px; color: white; background-color: rgba(66, 66, 66, 0.329); display: flex;">
+            <div style="margin: auto; display:block;">
+                <video autoplay muted loop style="right: 0; top: 60px; position: fixed; width: 100%; z-index: -1; overflow: hidden;">
+                    <source src="media/bg.mp4">
+                    <div style="display: flex;">
+                        <h1>Piotr Siegoczyński – Mistrz Świata w Kickboxingu</h1>
+                        <h2>Sportowiec. Trener. Motywator.</h2>
+                    </div>
+                </video>
+                <h1>Piotr Siegoczyński – Mistrz Świata w Kickboxingu</h1>
+                <h2>Sportowiec. Trener. Motywator.</h2>
+            </div>
+            
+        </div>
+    </body>
+    <style>
+        :root{
+            --black:black;
+            --red1:#3D0000;
+            --red2:#950101;
+            --red3:red;
+        }
+
+        *{
+            margin: 0;
+        }
+
+        body{
+            width: 100%;
+            background-color: black;
+            height: 2000px;
+        }
+
+        nav{
+            padding-left: 30px;
+            position: fixed;
+            width: 100%;
+            
+            background-color: var(--red1);
+            background-image: linear-gradient(var(--red1) 70%, #00000000 100%);
+        }
+
+        nav li{
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px;
+            color: rgb(0, 0, 0);
+        }
+
+        nav li:hover{
+            background-color: var(--red2);
+            color: black;
+        }
+    </style>
+</html>
