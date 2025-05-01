@@ -1,68 +1,294 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <nav>
-            <ul>
-                <li>Strona główna</li>
-                <li>O mnie</li>
-                <li>Osiągnięcia</li>
-                <li>Galeria</li>
-                <li>Media</li>
-            </ul>
-        </nav>
-        <div id="header" style="height: 650px; width: 100%; padding-top: 65px; color: white; background-color: rgba(66, 66, 66, 0.329); display: flex;">
-            <div style="margin: auto; display:block;">
-                <video autoplay muted loop style="right: 0; top: 60px; position: fixed; width: 100%; z-index: -1; overflow: hidden;">
+    <body onload="loadscript()">
+        <div id="body">
+            <nav>
+                <ul style="padding: 0;">
+                    <li><a href="#stronaGlowna">Strona główna</a></li>
+                    <li><a href="#oMnie">O mnie</a></li>
+                    <li><a href="#osiagniecia">Osiągnięcia</a></li>
+                    <li><a href="#galeria2">Galeria</a></li>
+                    <li><a href="#oferta">Oferta</a></li>
+                    <li><a href="#wMediach">Media</a></li>
+                </ul>
+            </nav>
+            <div style="width: 100%; height: 63px;" id="stronaGlowna"></div>
+            <div id="main">
+                <video autoplay muted loop id="main_video2">
                     <source src="media/bg.mp4">
-                    <div style="display: flex;">
-                        <h1>Piotr Siegoczyński – Mistrz Świata w Kickboxingu</h1>
-                        <h2>Sportowiec. Trener. Motywator.</h2>
-                    </div>
                 </video>
                 <h1>Piotr Siegoczyński – Mistrz Świata w Kickboxingu</h1>
-                <h2>Sportowiec. Trener. Motywator.</h2>
+                <h2>Sportowiec. Trener. Motywator.</h2><br>
+                <h2>„Mistrz nie rodzi się na ringu – mistrz rodzi się na treningu.”</h2>
             </div>
+            <!--
+            <div id="main_video_div">
+                <video autoplay muted loop id="main_video">
+                    <source src="media/bg.mp4">
+                </video>
+            </div>
+            -->
+            <div style="width: 100%; height: 300px; background-color: aqua;" class="textContainer" id="oMnie">
+                <h1>Mistrz nie rodzi się na ringu – mistrz rodzi się na treningu.</h1>
+                <h2>Jestem Piotr Siegoczyński, wielokrotny mistrz świata w kickboxingu. Znam smak zwycięstwa, ale też ból porażki. To one kształtowały mnie jako zawodnika i człowieka.
+                    Dziś nie tylko trenuję, ale i szkolę innych — przekazując im to, czego sam nauczyłem się przez dekady. Niezależnie, czy zaczynasz swoją przygodę, czy chcesz wejść na wyższy poziom – możesz liczyć na moje wsparcie.</h2>
+            </div>
+            <div style="width: 100%; height: 300px; background-color: rgb(0, 255, 34);" class="textContainer" id="osiagniecia">
+                <h1>Droga przez ring</h1>
+                <h2>Każdy medal, każda walka, to osobna historia. Pierwszy tytuł Mistrza Polski zdobyłem jako młody chłopak pełen zapału. Potem przyszły kolejne — trudniejsze, bardziej wymagające.
+                    Punktem kulminacyjnym była wygrana na mistrzostwach świata WAKO. To moment, którego nie da się zapomnieć – adrenalina, flaga Polski nad głową, łzy w oczach. Ale to nie koniec. Bo prawdziwy mistrz zawsze idzie dalej.</h2>
+            </div>
+            <div style="width: 100%; height: 450px; background-color: aqua;" class="textContainer" id="galeria2">
+                <h1>Moje sportowe chwile</h1>
+                <div style="width: 1000px; height: 350px; background-color: rgba(128, 255, 0, 0); display: flex; justify-content: space-evenly; align-items: center;">
+                    <img src="media/Piotr_Siegoczyński_1.jpg" onclick="enlarge(1)">
+                    <img src="media/Piotr_Siegoczyński_2.jpg" onclick="enlarge(2)">
+                    <img src="media/Piotr_Siegoczyński_3.jpg" onclick="enlarge(3)" style="object-position: 0%;">
+
+                </div>
+            </div>
+            <div style="width: 100%; height: 200px; background-color: rgb(0, 255, 34);" class="textContainer" id="oferta">
+                <h2>Szukasz czegoś więcej niż zwykłego treningu?
+                    Ze mną nie tylko poznasz techniki kickboxingu, ale nauczysz się dyscypliny, koncentracji i pracy nad sobą.
+                    Niezależnie od wieku, poziomu czy celu — pomogę Ci osiągnąć maksimum Twoich możliwości.</h2>
+            </div>
+            <div style="width: 100%; height: 400px; background-color: aqua;" class="textContainer" id="wMediach">
+                <p>w mediach</p>
+            </div>
+
+
+
             
         </div>
-    </body>
-    <style>
-        :root{
-            --black:black;
-            --red1:#3D0000;
-            --red2:#950101;
-            --red3:red;
-        }
 
-        *{
-            margin: 0;
-        }
-
-        body{
-            width: 100%;
-            background-color: black;
-            height: 2000px;
-        }
-
-        nav{
-            padding-left: 30px;
-            position: fixed;
-            width: 100%;
+        <div id="galeria" style="display: none; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); position: fixed; z-index: 100; justify-content: center; align-items: center;">
+            <button style="position: fixed; right: 10px; top: 10px; width: 40px; height: 40px; background-color: rgb(127 127 127);" onclick="changeDisplay()">X</button>
             
-            background-color: var(--red1);
-            background-image: linear-gradient(var(--red1) 70%, #00000000 100%);
-        }
+            <button style="position: fixed; left: 10px; top: auto; bottom: auto; width: 40px; height: 40px; background-color: rgb(127 127 127);" onclick="previous()"><p> < </p></button>
+            <button style="position: fixed; right: 10px; top: auto; bottom: auto; width: 40px; height: 40px; background-color: rgb(127 127 127);" onclick="next()"><p> > </p></button>
 
-        nav li{
+            <div style="position: fixed; bottom: 10px; width: 120px; height: 40px; display: flex;">
+                <button style="left: 0; width: 40px; height: 40px; background-color: rgb(127 127 127); padding: 0;" onclick="enlarge(1)">
+                    <img src="media/Piotr_Siegoczyński_1.jpg" style="max-width: 100%; max-height: 100%;">
+                </button>
+                <button style="left: 0; width: 40px; height: 40px; background-color: rgb(127 127 127); padding: 0;" onclick="enlarge(2)">
+                    <img src="media/Piotr_Siegoczyński_2.jpg"  style="max-width: 100%; max-height: 100%;">
+                </button>
+                <button style="left: 0; width: 40px; height: 40px; background-color: rgb(127 127 127); padding: 0;" onclick="enlarge(3)">
+                    <img src="media/Piotr_Siegoczyński_3.jpg"  style="max-width: 100%; max-height: 100%;">
+                </button>
+            </div>
+            
+
+            <img src="media/Piotr_Siegoczyński_1.jpg" id="galeria_img" style="position: fixed; top:auto;">
+        </div>
+        <!--
+        <div style="width: 200px; height: 150px; left: 0; top: 0; background-color: red; position: fixed;">
+            <p>1. Strona główna 1</p>
+            <p>2. O mnie 3</p>
+            <p>3. Osiągnięcia 2</p>
+            <p>4. Galeria</p>
+            <p>5. Oferta 2</p>
+            <p>6. W mediach</p>
+        </div>
+        -->
+    </body>
+</html>
+
+<style>
+    :root{
+        --grey:#0c0c0c;
+        --black:black;
+        --red1:#3D0000;
+        --red2:#950101;
+        --red3:red;
+        --navbarHeight: 100px;
+    }
+
+    *{
+        margin: 0;
+    }
+
+    body{
+        background-color: var(--grey);
+    }
+
+    #body{
+        width: 1000px;
+        max-width: 1000px;
+        /*background-color: black;*/
+        margin: 0 auto;
+    }
+
+    nav{
+        width: 1000px;
+        max-width: 1000px;
+        /*height: var(--navbarHeight);*/
+        position: fixed;
+        background-color: pink;
+    }
+
+    nav li{
             display: inline-block;
+            /*height: 100%;*/
             font-size: 20px;
             font-weight: bold;
             padding: 20px;
             color: rgb(0, 0, 0);
-        }
 
-        nav li:hover{
-            background-color: var(--red2);
-            color: black;
+            
+    }
+
+    nav li:hover{
+        background-color: var(--red2);
+        color: black;
+    }
+
+    #main{
+        /* padding-top: var(--navbarHeight); /* Zmienić na zero */
+        width: 100%;
+        /*height: 500px;*/
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1332 / 720;
+        color: white;
+    }
+
+    #main_video{
+        width: 1000px; 
+        max-width: 1000px;
+        right: auto;
+        left: auto;
+        top: var(--navbarHeight);
+        position: fixed; 
+        z-index: -1; 
+        overflow: hidden;
+    }
+
+    #main_video2{
+        width: 1000px; 
+        max-width: 1000px;
+        position: absolute;
+        /*top: 0;*/
+        /*right: auto;
+        left: auto;
+        top: var(--navbarHeight);
+        position: fixed; */
+        z-index: -1; 
+        overflow: hidden;
+    }
+
+    .textContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .textContainer h1,h2{
+        padding: 5px 50px;
+    }
+
+    #galeria2 img{
+        width: 30%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    #galeria2 img:hover{
+        width: 35%;
+        height: 330px;
+        border-radius: 40px;
+        /*transition-duration: 300ms;*/
+        transition: all 0.3s ease-in-out;
+    }
+
+    #galeria img{
+
+        max-width: calc(100vw - 140px);
+        max-height: calc(100vh - 140px);
+    }
+
+</style>
+
+<script>
+    var photo = 1;
+
+    document.addEventListener('keydown', function(event){
+        console.log("Naciśnięto: " + event.which);
+        if(event.which=="37"){
+            previous();
         }
-    </style>
-</html>
+        if(event.which=="39"){
+            next();
+        }
+        if(event.which=="27"){
+            document.getElementById("galeria").style.display="none";
+        }
+    })
+
+
+    /*function loadscript(){
+        console.log("onload");
+        document.addEventListener("keypress", function onEvent(event) {
+            /*
+            if (event.key == "Enter") {
+                console.log("enter")
+                changeDisplay();
+            }
+            else*/ /* if (event.keyCode == 27){
+                console.log("escape");
+                document.getElementById("galeria").style.display="none";
+            }
+            else if (event.key == "ArrowLeft"){
+                console.log("L");
+                
+            }
+            else if (event.keyCode == "39"){
+                console.log("R");
+                
+            }
+        }
+        )
+    }*/
+
+    function changeDisplay(){
+        a = document.getElementById("galeria");
+        if(a.style.display == "none"){
+            a.style.display = "flex"
+        }
+        else{
+            a.style.display = "none"
+        }
+    }
+
+    function enlarge(n){
+        photo=n;
+        console.log(photo);
+        document.getElementById("galeria_img").src="media/Piotr_Siegoczyński_" + n + ".jpg";
+        document.getElementById("galeria").style.display="flex";
+    }
+
+    function previous(){
+        if(photo==1) return;
+        photo=photo-1;
+        document.getElementById("galeria_img").src="media/Piotr_Siegoczyński_" + photo + ".jpg";
+    }
+
+    function next(){
+        if(photo==3) return;
+        photo=photo+1;
+        document.getElementById("galeria_img").src="media/Piotr_Siegoczyński_" + photo + ".jpg";
+    }
+
+    /*
+    document.onkeydown = function(evt){
+        evt = evt || window.event;
+        var is
+    }
+    */
+</script>
