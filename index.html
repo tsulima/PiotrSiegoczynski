@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <body onload="loadscript()">
+    <body>
         <div id="body">
             <nav>
                 <ul style="padding: 0;">
+                    <li><b>Piotr Siegoczyński</b></li>
+                    |
                     <li><a href="#stronaGlowna">Strona główna</a></li>
                     <li><a href="#oMnie">O mnie</a></li>
                     <li><a href="#osiagniecia">Osiągnięcia</a></li>
@@ -21,44 +23,56 @@
                 <h2>Sportowiec. Trener. Motywator.</h2><br>
                 <h2>„Mistrz nie rodzi się na ringu – mistrz rodzi się na treningu.”</h2>
             </div>
-            <!--
-            <div id="main_video_div">
-                <video autoplay muted loop id="main_video">
-                    <source src="media/bg.mp4">
-                </video>
-            </div>
-            -->
-            <div style="width: 100%; height: 300px; background-color: aqua;" class="textContainer" id="oMnie">
+            <div style="width: 100%; height: 300px; background-color: var(--a1st_color);" class="textContainer" id="oMnie">
                 <h1>Mistrz nie rodzi się na ringu – mistrz rodzi się na treningu.</h1>
                 <h2>Jestem Piotr Siegoczyński, wielokrotny mistrz świata w kickboxingu. Znam smak zwycięstwa, ale też ból porażki. To one kształtowały mnie jako zawodnika i człowieka.
                     Dziś nie tylko trenuję, ale i szkolę innych — przekazując im to, czego sam nauczyłem się przez dekady. Niezależnie, czy zaczynasz swoją przygodę, czy chcesz wejść na wyższy poziom – możesz liczyć na moje wsparcie.</h2>
             </div>
-            <div style="width: 100%; height: 300px; background-color: rgb(0, 255, 34);" class="textContainer" id="osiagniecia">
+            <div style="width: 100%; height: 300px; background-color: var(--a1st_color);" class="textContainer" id="osiagniecia">
                 <h1>Droga przez ring</h1>
                 <h2>Każdy medal, każda walka, to osobna historia. Pierwszy tytuł Mistrza Polski zdobyłem jako młody chłopak pełen zapału. Potem przyszły kolejne — trudniejsze, bardziej wymagające.
                     Punktem kulminacyjnym była wygrana na mistrzostwach świata WAKO. To moment, którego nie da się zapomnieć – adrenalina, flaga Polski nad głową, łzy w oczach. Ale to nie koniec. Bo prawdziwy mistrz zawsze idzie dalej.</h2>
             </div>
-            <div style="width: 100%; height: 450px; background-color: aqua;" class="textContainer" id="galeria2">
+            <div style="width: 100%; height: 450px; background-color: var(--a1st_color);" class="textContainer" id="galeria2">
                 <h1>Moje sportowe chwile</h1>
                 <div style="width: 1000px; height: 350px; background-color: rgba(128, 255, 0, 0); display: flex; justify-content: space-evenly; align-items: center;">
                     <img src="media/Piotr_Siegoczyński_1.jpg" onclick="enlarge(1)">
                     <img src="media/Piotr_Siegoczyński_2.jpg" onclick="enlarge(2)">
                     <img src="media/Piotr_Siegoczyński_3.jpg" onclick="enlarge(3)" style="object-position: 0%;">
-
                 </div>
             </div>
-            <div style="width: 100%; height: 200px; background-color: rgb(0, 255, 34);" class="textContainer" id="oferta">
+            <div style="width: 100%; height: 200px; background-color: var(--a1st_color);" class="textContainer" id="oferta">
                 <h2>Szukasz czegoś więcej niż zwykłego treningu?
                     Ze mną nie tylko poznasz techniki kickboxingu, ale nauczysz się dyscypliny, koncentracji i pracy nad sobą.
                     Niezależnie od wieku, poziomu czy celu — pomogę Ci osiągnąć maksimum Twoich możliwości.</h2>
+                <h3>+48 123 456 789</h3>
+                <h3>kontakt@piotrsiegoczynski.pl</h3>
             </div>
-            <div style="width: 100%; height: 400px; background-color: aqua;" class="textContainer" id="wMediach">
-                <p>w mediach</p>
+            <div style="width: 100%; background-color: var(--a1st_color);" class="textContainer" id="wMediach">
+                <h1 style="padding: 30px 0px;">Media</h1>
+                <div style="display: flex; width: 1000px; justify-content: space-evenly; padding-bottom: 30px;">
+                    <div class="article" style="max-width: 450px; height:700px; background-color: rgb(255, 255, 255); overflow: hidden;" onclick="window.open('https://piaseczno.pl/piotr-siegoczynski-wyrozniony-za-caloksztalt-osiagniec-sportowych/', '_blank');">
+                        <img src="media/Piotr_Siegoczyński_4.jpg" style="max-width: 100%; height: 300px; object-fit: cover;">
+                        <h2>Piotr Siegoczyński wyróżniony za całokształt osiągnięć sportowych</h2>
+                        <p>17.11.2020</p>
+                        <p>Piotr Siegoczyński, wielokrotny mistrz świata i Europy w kick-boxingu, obecnie trener KS Piaseczno oraz X Fight Piaseczno, został wyróżniony przez Ministra Kultury, Dziedzictwa Narodowego i Sportu brązową odznaką „Za Zasługi dla Sportu”.</p>
+                        <p>Ze względu na pandemię uroczystość odbyła się w kameralnym gronie. Odznakę, w imieniu ministra, wręczył radny Sergiusz Muszyński, który przekazał również gratulacje i słowa uznania od wicepremiera Piotra Glińskiego. – Jesteśmy Panu bardzo wdzięczni za to wszystko, czego Pan dokonał. Nie ma potrzeby przedstawiania tutaj szerszego uzasadnienia, bo wszyscy znamy Pana dokonania. Niech to odznaczenie będzie wyrazem naszej wdzięczności i radości.</p>
+                        <p>Wspaniałej kariery oraz wyjątkowych wyników w międzynarodowej rywalizacji pogratulował także Piotrowi Siegoczyńskiemu Starosta Piaseczyński Ksawery Gut.</p>
+                        <div class="end_gradient"></div>
+                    </div>
+                    <div class="article" style="max-width: 450px; height:700px; background-color: rgb(255, 255, 255); overflow: hidden;" onclick="window.open('https://www.polskieradio.pl/10/3961/artykul/1836137,jakie-czasy-czekaja-polski-kickboxing', '_blank');">
+                        <img src="media/Piotr_Siegoczyński_5.jpg" style="max-width: 100%; height: 300px; object-fit: cover; object-position: 100%;">
+                        <h2>Jakie czasy czekają polski kickboxing?</h2>
+                        <p>30.08.2017</p>
+                        <p>Piotr Siegoczyński - były mistrz świata, trener oraz prezes PZKb.</p>
+                        <p>Na kickboxingu zna się jak mało kto. Piotr Siegoczyński jako zawodnik był m.in. 6 razy mistrzem świata, wielokrotnie stawał na podium mistrzostw Europy. Do dziś potrafi jeszcze pokazać znacznie młodszym zawodnikom na czym polega ten sport. Przez wiele lat pracował jako trener, a jego zawodnicy i zawodniczki (m.in. Dorota Godzina) odnosili wiele sukcesów na arenach międzynarodowych, zarówno w amatorskiej jak i zawodowej odmianie kickboxingu. Od kilku miesięcy jest prezesem Polskiego Związku Kickboxingu. Podczas kandydowania obiecywał m.in. pozyskanie sponsorów i pracę nad promocja kickboxingu. Czy już są efekty jego pracy?</p>
+                        <div class="end_gradient"></div>
+                    </div>
+                </div>
             </div>
-
-
-
-            
+            <div class="textContainer" style="width: 1000px; height: 100px; background-color: var(--a1st_color);">
+                <p>© 2025 Piotr Siegoczyński. Wszelkie prawa zastrzeżone.</p>
+            </div>
         </div>
 
         <div id="galeria" style="display: none; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); position: fixed; z-index: 100; justify-content: center; align-items: center;">
@@ -78,31 +92,27 @@
                     <img src="media/Piotr_Siegoczyński_3.jpg"  style="max-width: 100%; max-height: 100%;">
                 </button>
             </div>
-            
-
             <img src="media/Piotr_Siegoczyński_1.jpg" id="galeria_img" style="position: fixed; top:auto;">
         </div>
-        <!--
-        <div style="width: 200px; height: 150px; left: 0; top: 0; background-color: red; position: fixed;">
-            <p>1. Strona główna 1</p>
-            <p>2. O mnie 3</p>
-            <p>3. Osiągnięcia 2</p>
-            <p>4. Galeria</p>
-            <p>5. Oferta 2</p>
-            <p>6. W mediach</p>
-        </div>
-        -->
     </body>
 </html>
 
 <style>
     :root{
+        /*--cream:#FFFDF6;*/
+        --cream:#FAF6E9;
         --grey:#0c0c0c;
         --black:black;
         --red1:#3D0000;
         --red2:#950101;
         --red3:red;
         --navbarHeight: 100px;
+
+        --background_color: white;
+        --a1st_color: var(--cream);
+        --a2nd_color: var(--black);
+        --b1st_color:var(--black);
+        --b2nd_color:var(--cream);
     }
 
     *{
@@ -110,44 +120,45 @@
     }
 
     body{
-        background-color: var(--grey);
+        background-color: var(--background_color);
     }
 
     #body{
         width: 1000px;
         max-width: 1000px;
-        /*background-color: black;*/
         margin: 0 auto;
     }
 
     nav{
+        padding-left: 0px;
+        padding-right: 0px;
         width: 1000px;
         max-width: 1000px;
-        /*height: var(--navbarHeight);*/
         position: fixed;
-        background-color: pink;
+        background-color: var(--a1st_color);
     }
 
     nav li{
-            display: inline-block;
-            /*height: 100%;*/
-            font-size: 20px;
-            font-weight: bold;
-            padding: 20px;
-            color: rgb(0, 0, 0);
-
-            
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px 27px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
     }
 
-    nav li:hover{
-        background-color: var(--red2);
+    nav li:hover:nth-child(n+2){
+        background-color: rgb(233, 222, 120);
         color: black;
     }
 
+    nav a{
+        display: block;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
     #main{
-        /* padding-top: var(--navbarHeight); /* Zmienić na zero */
         width: 100%;
-        /*height: 500px;*/
         background-color: rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
@@ -172,11 +183,6 @@
         width: 1000px; 
         max-width: 1000px;
         position: absolute;
-        /*top: 0;*/
-        /*right: auto;
-        left: auto;
-        top: var(--navbarHeight);
-        position: fixed; */
         z-index: -1; 
         overflow: hidden;
     }
@@ -188,7 +194,7 @@
         align-items: center;
     }
 
-    .textContainer h1,h2{
+    .textContainer h1,h2,h3{
         padding: 5px 50px;
     }
 
@@ -203,8 +209,8 @@
         width: 35%;
         height: 330px;
         border-radius: 40px;
-        /*transition-duration: 300ms;*/
         transition: all 0.3s ease-in-out;
+        cursor: pointer;
     }
 
     #galeria img{
@@ -213,13 +219,36 @@
         max-height: calc(100vh - 140px);
     }
 
+    .article{
+        position: relative;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+
+    .article h2{
+        padding: 10px;
+    }
+
+    .article p{
+        padding: 5px 10px;
+        font-size: 17px;
+    }
+
+    .end_gradient{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 450px;
+        height: 350px;
+        background: linear-gradient(0deg,var(--a1st_color), rgba(0, 0, 0, 0) 100%);
+    }
+
 </style>
 
 <script>
     var photo = 1;
 
     document.addEventListener('keydown', function(event){
-        console.log("Naciśnięto: " + event.which);
         if(event.which=="37"){
             previous();
         }
@@ -230,31 +259,6 @@
             document.getElementById("galeria").style.display="none";
         }
     })
-
-
-    /*function loadscript(){
-        console.log("onload");
-        document.addEventListener("keypress", function onEvent(event) {
-            /*
-            if (event.key == "Enter") {
-                console.log("enter")
-                changeDisplay();
-            }
-            else*/ /* if (event.keyCode == 27){
-                console.log("escape");
-                document.getElementById("galeria").style.display="none";
-            }
-            else if (event.key == "ArrowLeft"){
-                console.log("L");
-                
-            }
-            else if (event.keyCode == "39"){
-                console.log("R");
-                
-            }
-        }
-        )
-    }*/
 
     function changeDisplay(){
         a = document.getElementById("galeria");
@@ -268,7 +272,6 @@
 
     function enlarge(n){
         photo=n;
-        console.log(photo);
         document.getElementById("galeria_img").src="media/Piotr_Siegoczyński_" + n + ".jpg";
         document.getElementById("galeria").style.display="flex";
     }
@@ -284,11 +287,4 @@
         photo=photo+1;
         document.getElementById("galeria_img").src="media/Piotr_Siegoczyński_" + photo + ".jpg";
     }
-
-    /*
-    document.onkeydown = function(evt){
-        evt = evt || window.event;
-        var is
-    }
-    */
 </script>
